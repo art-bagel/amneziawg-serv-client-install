@@ -21,3 +21,7 @@ fi
 apt install -y software-properties-common
 add-apt-repository -y ppa:amnezia/ppa
 apt install -y amneziawg amneziawg-tools qrencode
+
+	# Enable routing on the server
+echo "net.ipv4.ip_forward = 1
+net.ipv6.conf.all.forwarding = 1" >/etc/sysctl.d/awg.conf
